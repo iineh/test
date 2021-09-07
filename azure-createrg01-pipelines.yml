@@ -9,29 +9,27 @@ trigger:
     - main
   paths:
     include:
-    - psscripts
+    - psscripts/*
     exclude:
-    - README.md
+    - psscripts02/*
 pr:
   branches:
     include:
     - main
   paths:
     include:
-    - psscripts
+    - psscripts/*
     exclude:
-    - README.md
+    - psscripts02/*
 
 pool:
   vmImage: ubuntu-latest
 
-jobs:
-- job: CreateRG
-  displayName: CreateRG
-  steps:
-  - task: AzureCLI@2
-    inputs:
-      azureSubscription: 'azure-spn'
-      scriptType: 'ps'
-      scriptLocation: 'scriptPath'
-      scriptPath: 'psscripts/createrg.ps1'
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+
+- script: |
+    echo Add other tasks to build, test, and deploy your project.
+    echo See https://aka.ms/yaml
+  displayName: 'Run a multi-line script'
