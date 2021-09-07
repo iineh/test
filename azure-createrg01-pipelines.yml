@@ -10,8 +10,6 @@ trigger:
   paths:
     include:
     - psscripts/*
-    exclude:
-    - psscript02/*
 pr:
   branches:
     include:
@@ -19,8 +17,6 @@ pr:
   paths:
     include:
     - psscripts/*
-    exclude:
-    - psscript02/*
 pool:
   vmImage: ubuntu-latest
 
