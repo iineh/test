@@ -9,7 +9,7 @@ trigger:
     - main
   paths:
     include:
-    - psscripts.ps1
+    - psscripts
     exclude:
     - README.md
 pr:
@@ -18,7 +18,7 @@ pr:
     - main
   paths:
     include:
-    - psscripts.ps1
+    - psscripts
     exclude:
     - README.md
 
